@@ -22,10 +22,16 @@ Design By <a href='https://www.maskoding.com'>MASKODING</a></div>
 <textarea id='outputDecrypt' disabled="true" >` + dataCodeEncrypt + `</textarea>
 <div class='areaButtonCopyku'>
 <button id='buttonCopyku' onclick='copyCodeku()'>Copy</button>
-<br/><a href='`+LinkDemo+`' target='_blank'>DEMO</a>
+<br/><a id='linkDemoku' href='`+LinkDemo+`' target='_blank'>DEMO</a>
 </div>
 </div>
 `;
+    if(statusLinkDemo=='hidden'){
+        document.getElementById('linkDemoku').setAttribute('style', 'display:none;');
+    };
+    if(statusLinkDemo=='show'){
+        document.getElementById('linkDemoku').setAttribute('style', '');
+    };
 document.getElementById('outputDecrypt').value = codingbungabdi.buka(document.getElementById('outputDecrypt').value, Passwordku);
 },1000);
   });
